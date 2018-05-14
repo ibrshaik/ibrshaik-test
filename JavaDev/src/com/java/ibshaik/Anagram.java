@@ -6,10 +6,10 @@ import java.util.Scanner;
 public class Anagram {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);	
+		try {
 			System.out.println("enter the tow strings for anagrams check");
 			
-			Scanner sc = new Scanner(System.in);
 			String a = sc.next();
 			String b = sc.next();
 			
@@ -18,7 +18,6 @@ public class Anagram {
 			
 			char[] charb = b.toLowerCase().toCharArray();
 			Arrays.sort(charb);
-			
 			String a1 = new String(chara);
 			String b1 = new String(charb);
 			
@@ -27,6 +26,13 @@ public class Anagram {
 			}
 			else{
 				System.out.println("Not Anagrams");
+			}
+			}
+			catch(Exception e){
+				e.printStackTrace();
+			}
+			finally{
+				sc.close();
 			}
 			
 			}
